@@ -33,7 +33,7 @@
 		color: #fff;
 		font-weight: normal;
 		background-position: 0 0;
-		@include transition(background 0.5s ease-in-out);
+		@include transition(all 0.5s ease-in-out);
 		@include text-shadow(0 1px 0 #75a61a);
 		text-decoration: none;
 		@include border-radius(23px);
