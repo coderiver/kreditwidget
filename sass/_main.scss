@@ -3,7 +3,7 @@
 
 
 #kreditwidget{
-
+	height: 1500px;
 
 	.clear {
 		clear: both;
@@ -33,7 +33,7 @@
 		color: #fff;
 		font-weight: normal;
 		background-position: 0 0;
-		@include transition(background 0.5s ease-out);
+		@include transition(background 0.5s ease-in-out);
 		@include text-shadow(0 1px 0 #75a61a);
 		text-decoration: none;
 		@include border-radius(23px);
@@ -41,7 +41,7 @@
 		@include background-image(linear-gradient(#d6ec60, #8bb72d));
 		background-size: 150%;
 		&:hover{
-			@include transition(all 0.5s ease-out);
+			@include transition(all 0.5s ease-in-out);
 			@include box-shadow(0 3px 0 #65a012);
 			background-position: 0 50%;
 		}
@@ -53,7 +53,7 @@
 		vertical-align: middle;
 		height: 33px;
 		line-height: 33px;
-		padding: 0 17px;
+		padding: 0 13px;
 		margin-left: 10px;
 		@include border-radius(4px);
 		@include background-clip(padding-box);
@@ -86,7 +86,7 @@
 	}
 
 	.out{
-		position: fixed;
+		position: absolute;
 		top: 20px;
 		left: 50%;
 		margin-left: -440px;
@@ -203,7 +203,7 @@
 			&:hover{
 				text-decoration: underline;
 				.icon-close{
-					@include transition(all 0.5s ease-out);
+					@include transition(all 0.5s ease-in-out);
 					@include opacity(.5);
 				}
 			}
@@ -235,7 +235,7 @@
 			}
 			&:hover{
 				.icon-back{
-					@include transition(all 0.5s ease-out);
+					@include transition(all 0.5s ease-in-out);
 					@include opacity(.5);
 				}
 			}
@@ -356,6 +356,203 @@
 					@include sized-sprite($icons, title);
 				}
 			}
+
+			.basket{
+				@extend %clr;
+				margin: 40px 0 0;
+				ul{
+					list-style: none;
+					margin-bottom: 23px;
+				}
+				li{
+					@extend %clr;
+					margin-top: 52px;
+					&:first-child{
+						margin-top: 0;
+					}
+				}
+			}
+				.basket__image{
+					float: left;
+					width: 155px;
+					text-align: center;
+					overflow: hidden;
+					margin-right: 26px;
+				}
+				.basket__meta{
+					margin-top: 8px;
+					margin-right: -3px;
+					position: relative;
+					float: left;
+					width: 574px;
+					padding: 23px 30px 25px;
+					border: 1px solid #dcdcdc;
+					@include border-radius(6px);
+					&:before{
+						@include sized-sprite($icons, arrow);
+						position: absolute;
+						top: 22px;
+						left: -15px;
+						content: "";
+					}
+				}
+					.basket__info{
+						display: inline-block;
+						width: 330px;
+						.h1{
+							font-weight: bold;
+							font-size: 15px;
+							color: #2b68af;
+							a{
+								text-decoration: none;
+								color: #2b68af;
+								font-size: 15px;
+								font-weight: bold;
+								&:hover{
+									text-decoration: underline;
+								}
+							}
+						}
+						.basket__code{
+							color: #34353c;
+							font-size: 10px;
+							span{
+								color: #787a87;
+							}
+						}
+					}
+					.basket__price{
+						display: inline-block;
+						width: 165px;
+						.label{
+							position: absolute;
+							top: 50%;
+							margin-top: -18px;
+							margin-left: 16px;
+						}
+					}
+					.basket__delete{
+						display: inline-block;
+						width: 45px;
+						.icon-delete{
+							cursor: pointer;
+							position: absolute;
+							display: inline-block;
+							top: 50%;
+							margin-top: -14px;
+							margin-left: 43px;
+						}
+					}
+
+					.basket__metadata{
+						@extend %clr;
+					}
+						.basket__status,
+						.basket__number{
+							float: left;
+						}
+							.basket__status{
+								position: relative;
+								width: 25%;
+								text-transform: lowercase;
+								font-size: 14px;
+								color: #8ebd3a;
+								margin-left: 35px;
+								margin-top: 7px;
+								line-height: 1;
+								&:after{
+									position: absolute;
+									width: 1px;
+									height: 36px;
+									top: 50%;
+									margin-top: -18px;
+									right: 0;
+									background: #dcdcdc;
+									content: "";
+								}
+								.icon-check{;
+									position: absolute;
+									top: 50%;
+									margin-top: -15px;
+									left: -36px;
+								}
+
+							}
+							.basket__number{
+								width: 50%;
+								margin-left: 13px;
+								font-size: 13px;
+								color: #787a87;
+								.basket__num{
+									position: relative;
+									display: inline-block;
+									margin-left: 11px;
+									input{
+										width: 47px;
+										height: 36px;
+										padding: 0 17px;
+										border: 1px solid #dcdcdc;
+										@include border-radius(19px);
+										@include box-shadow(inset 0 2px 0 rgba(0,0,0,.17));
+										color: #3b3b3b;
+										font-size: 17px;
+									}
+									.basket__num-up{
+										cursor: pointer;
+										position: absolute;
+										top: 12px;
+										right: 16px;
+										display: inline-block;
+										@include sized-sprite($icons, ico_arrow_up);
+									}
+									.basket__num-down{
+										cursor: pointer;
+										position: absolute;
+										top: 21px;
+										right: 16px;
+										display: inline-block;
+										@include sized-sprite($icons, ico_arrow_down);
+									}
+								}
+							}
+
+					.basket__resume{
+						padding: 12px 136px 9px 36px;
+						margin: 0 -30px 0 -36px;
+						line-height: 1;
+						text-align: right;
+						color: #fff;
+						font-size: 22px;
+						background-color: #8bb82e;
+						@include box-shadow(inset 0 2px 1px rgba(0,0,0,.20));
+						span{
+							font-size: 25px;
+						}
+						strong{
+							font-size: 37px;
+						}
+						small{
+							font-size: 14px;
+						}
+					}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
