@@ -500,36 +500,37 @@
 								margin-left: 13px;
 								font-size: 13px;
 								color: #787a87;
-								.basket__num{
-									position: relative;
+							}
+
+							.numb{
+								position: relative;
+								display: inline-block;
+								margin-left: 11px;
+								input{
+									width: 47px;
+									height: 36px;
+									padding: 0 17px;
+									border: 1px solid #dcdcdc;
+									@include border-radius(19px);
+									@include box-shadow(inset 0 2px 0 rgba(0,0,0,.17));
+									color: #3b3b3b;
+									font-size: 17px;
+								}
+								.numb__up{
+									cursor: pointer;
+									position: absolute;
+									top: 12px;
+									right: 16px;
 									display: inline-block;
-									margin-left: 11px;
-									input{
-										width: 47px;
-										height: 36px;
-										padding: 0 17px;
-										border: 1px solid #dcdcdc;
-										@include border-radius(19px);
-										@include box-shadow(inset 0 2px 0 rgba(0,0,0,.17));
-										color: #3b3b3b;
-										font-size: 17px;
-									}
-									.basket__num-up{
-										cursor: pointer;
-										position: absolute;
-										top: 12px;
-										right: 16px;
-										display: inline-block;
-										@include sized-sprite($icons, ico_arrow_up);
-									}
-									.basket__num-down{
-										cursor: pointer;
-										position: absolute;
-										top: 21px;
-										right: 16px;
-										display: inline-block;
-										@include sized-sprite($icons, ico_arrow_down);
-									}
+									@include sized-sprite($icons, ico_arrow_up);
+								}
+								.numb__down{
+									cursor: pointer;
+									position: absolute;
+									top: 21px;
+									right: 16px;
+									display: inline-block;
+									@include sized-sprite($icons, ico_arrow_down);
 								}
 							}
 
