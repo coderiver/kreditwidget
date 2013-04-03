@@ -211,6 +211,8 @@
 				position: absolute;
 				top: 16px;
 				right: -27px;
+				@include transition(all 0.5s ease-in-out);
+				@include opacity(1);
 			}
 		}
 
@@ -245,6 +247,8 @@
 				top: 3px;
 				left: 0;
 				margin-right: 10px;
+				@include transition(all 0.5s ease-in-out);
+				@include opacity(1);
 			}
 		}
 		.footer__move{
@@ -441,6 +445,14 @@
 							top: 50%;
 							margin-top: -14px;
 							margin-left: 43px;
+							@include transition(all 0.5s ease-in-out);
+							@include opacity(1);
+						}
+						&:hover{
+							.icon-delete{
+								@include transition(all 0.5s ease-in-out);
+								@include opacity(.5);
+							}
 						}
 					}
 

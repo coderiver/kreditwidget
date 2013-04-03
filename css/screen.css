@@ -65,13 +65,13 @@ a { color: #00919e; }
 #kreditwidget .header__close { position: relative; display: inline-block; float: right; margin-right: 28px; cursor: pointer; vertical-align: top; text-transform: lowercase; font-size: 14px; color: #34353c; padding-top: 15px; text-decoration: none; }
 #kreditwidget .header__close:hover { text-decoration: underline; }
 #kreditwidget .header__close:hover .icon-close { -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
-#kreditwidget .header__close .icon-close { position: absolute; top: 16px; right: -27px; }
+#kreditwidget .header__close .icon-close { position: absolute; top: 16px; right: -27px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 #kreditwidget .footer { height: 100px; }
 #kreditwidget .footer__nav { display: inline-block; line-height: 100px; vertical-align: middle; color: #919191; font-size: 14px; text-decoration: none; }
 #kreditwidget .footer__nav a { text-decoration: none; color: #919191; }
 #kreditwidget .footer__nav a:hover { text-decoration: underline; }
 #kreditwidget .footer__nav:hover .icon-back { -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
-#kreditwidget .footer__nav .icon-back { display: inline-block; position: relative; top: 3px; left: 0; margin-right: 10px; }
+#kreditwidget .footer__nav .icon-back { display: inline-block; position: relative; top: 3px; left: 0; margin-right: 10px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 #kreditwidget .footer__move { float: right; width: 60%; text-align: right; }
 #kreditwidget .footer__move .button { float: right; margin-top: 23px; }
 #kreditwidget .sequence { position: relative; overflow: hidden; margin: 0 -30px 30px -36px; }
@@ -107,7 +107,8 @@ a { color: #00919e; }
 #kreditwidget .basket__price { display: inline-block; width: 165px; }
 #kreditwidget .basket__price .label { position: absolute; top: 50%; margin-top: -18px; margin-left: 16px; }
 #kreditwidget .basket__delete { display: inline-block; width: 45px; }
-#kreditwidget .basket__delete .icon-delete { cursor: pointer; position: absolute; display: inline-block; top: 50%; margin-top: -14px; margin-left: 43px; }
+#kreditwidget .basket__delete .icon-delete { cursor: pointer; position: absolute; display: inline-block; top: 50%; margin-top: -14px; margin-left: 43px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+#kreditwidget .basket__delete:hover .icon-delete { -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
 #kreditwidget .basket__status, #kreditwidget .basket__number { float: left; }
 #kreditwidget .basket__status { position: relative; width: 25%; text-transform: lowercase; font-size: 14px; color: #8ebd3a; margin-left: 35px; margin-top: 7px; line-height: 1; }
 #kreditwidget .basket__status:after { position: absolute; width: 1px; height: 36px; top: 50%; margin-top: -18px; right: 0; background: #dcdcdc; content: ""; }
