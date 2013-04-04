@@ -3,7 +3,6 @@
 
 
 #kreditwidget{
-	height: 1500px;
 
 	.clear {
 		clear: both;
@@ -91,6 +90,7 @@
 		left: 50%;
 		margin-left: -440px;
 		z-index: 1001;
+		padding-bottom: 20px;
 	}
 
 	.overlay{
@@ -766,11 +766,14 @@
 					@include text-shadow(0 1px 0 #406a0d);
 					@include background-image(linear-gradient(#a4c259, #578316));
 					&:before{
-						position: absolute;
-						bottom: -10px;
-						left: 0;
 						content: "";
-						@include sized-sprite($icons, app_corn);
+						position: absolute;
+						display: block;
+						border-style: solid;
+						border-color: #355c04 transparent transparent transparent;
+						bottom: -13px;
+						left: 0;
+						border-width: 13px 0 0 14px;
 					}
 					&:after{
 						position: absolute;
@@ -837,8 +840,8 @@
 			 @include text-shadow(0 1px 0 #7dbd21);
 			 text-align: center;
 			 font-weight: normal;
-			 padding: 6px 34px; /* Adjust to suit */
-			 margin: 24px auto 35px; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+			 padding: 6px 34px;
+			 margin: 24px auto 35px;
 				&:before, &:after{
 					content: "";
 					position: absolute;
@@ -888,6 +891,188 @@
 					color: #34353c;
 					font-size: 15px;
 				}
+
+	.userdata{
+		width: 510px;
+		margin: 0 auto 25px;
+	}
+		.formline{
+			margin-bottom: 5px;
+			label{
+				float: left;
+				text-align: right;
+				width: 110px;
+				color: #2c2d33;
+				font-size: 12px;
+				margin-right: 27px;
+				height: 38px;
+				line-height: 38px;
+			}
+			input{
+				position: relative;
+				border: 1px solid #dcdcdc;
+				@include border-radius(19px);
+				@include box-shadow(inset 0 2px 0 rgba(0,0,0,.17));
+				height: 36px;
+				width: 251px;
+				padding: 0 20px;
+				vertical-align: middle;
+				display: inline-block;
+				font-size: 14px;
+			}
+		}
+				.formline__accept{
+					position: relative;
+						&:after{
+							position: absolute;
+							top: 6px;
+							right: -44px;
+							content: "";
+							@include sized-sprite($icons, ico_check);
+						}
+						input{
+							@include box-shadow(none);
+							border: 1px solid #95be34;
+						}
+				}
+				.formline__deny{
+					position: relative;
+					&:after{
+						position: absolute;
+						top: 6px;
+						right: -44px;
+						content: "";
+						@include sized-sprite($icons, ico_warning);
+					}
+					input{
+						@include box-shadow(none);
+						border: 1px solid #e29292;
+					}
+				}
+			.select{
+				position: relative;
+				display: table;
+				select{
+					position: absolute;
+					opacity: 0;
+					height: 39px;
+					-webkit-appearance: none;
+					width: 100%;
+					z-index: 3;
+					top: 0;
+					left: 0;
+				}
+				.icon-arrow{
+					position: absolute;
+					right: 18px;
+					top: 50%;
+					margin-top: -1px;
+					display: inline-block;
+					z-index: 2;
+					cursor: pointer;
+					@include transition(all 0.5s ease-in-out);
+					@include opacity(.8);
+					&:hover{
+						@include transition(all 0.5s ease-in-out);
+						@include opacity(1);
+					}
+				}
+			}
+				.lteie8{
+					.select{
+						input { visibility: hidden; }
+					}
+				}
+
+			.formline__right{
+				display: table;
+			}
+					.formline_gender{
+						input{
+							width: 101px;
+						}
+					}
+
+					.formline_birth{
+						.select{
+							.icon-arrow{
+								right: 12px;
+							}
+						}
+						.formline__day{
+							float: left;
+							margin-right: 10px;
+							input{
+								width: 21px;
+							}
+						}
+						.formline__month{
+							float: left;
+							margin-right: 12px;
+							input{
+								width: 102px;
+							}
+						}
+						.formline__year{
+							float: left;
+							input{
+								width: 21px;
+							}
+						}
+					}
+
+					.formline__series{
+						float: left;
+						margin-right: 8px;
+						input{
+							width: 51px;
+						}
+					}
+					.formline__number{
+						float: left;
+						input{
+							width: 148px;
+						}
+					}
+					.formline__sideinfo{
+						display: block;
+						font-size: 10px;
+						color: #bebebe;
+						margin: 4px 0 2px 12px;
+					}
+					.formline__issue{
+						textarea{
+							border: 1px solid #dcdcdc;
+							@include border-radius(19px);
+							@include box-shadow(inset 0 2px 0 rgba(0,0,0,.17));
+							height: 69px;
+							width: 251px;
+							padding: 0 20px;
+							vertical-align: middle;
+							display: inline-block;
+							font-size: 14px;
+							resize: vertical;
+						}
+					}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
