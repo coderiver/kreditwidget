@@ -558,7 +558,7 @@
 
 
 			.order{
-				margin: 37px 0;
+				margin: 37px 0 11px;
 			}
 				.order__list{
 					margin-left: 15px;
@@ -630,6 +630,23 @@
 							font-weight: normal;
 							line-height: 1;
 						}
+						.numb{
+							margin-top: 10px;
+							margin-left: 0;
+							input{
+								width: 44px;
+								height: 30px;
+								padding: 0 14px;
+							}
+							.numb__up{
+								top: 8px;
+								right: 14px;
+							}
+							.numb__down{
+								top: 16px;
+								right: 14px;
+							}
+						}
 					}
 						.order__total{
 							float: left;
@@ -639,8 +656,10 @@
 							line-height: 1;
 							background: #fff;
 							padding: 8px 13px 7px 14px;
-							margin: 8px 50px 8px 0;
+							margin: 8px 44px 8px 6px;
 							border-bottom: 1px solid #ead8a9;
+							border-left: 1px solid #f8eccd;
+							border-right: 1px solid #f8eccd;
 							@include box-shadow(0 1px 1px #f8eccd);
 							strong{
 								display: inline-block;
@@ -658,24 +677,28 @@
 						}
 						.order__percent{
 							float: left;
-							width: 150px;
+							width: 90px;
+							margin-right: 43px;
 						}
 						.order__first-call{
 							float: left;
-							width: 150px;
+							width: 120px;
+							margin-right: 31px;
 						}
 						.order__term{
 							float: left;
 							width: 150px;
+							width: 115px;
 						}
 					.order__meta{
-						padding: 13px 30px;
+						padding: 14px 30px;
 					}
 						.order__payment{
 							color: #34353c;
 							font-size: 15px;
 							display: inline-block;
 							width: 160px;
+							line-height: 1.3;
 							strong{
 								color: #6fae35;
 								font-size: 28px;
