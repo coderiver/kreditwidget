@@ -197,11 +197,13 @@
 			vertical-align: top;
 			text-transform: lowercase;
 			font-size: 14px;
-			color: #34353c;
+			color: #9a9a9a;
 			padding-top: 15px;
 			text-decoration: none;
+			@include transition(all 0.5s ease-in-out);
 			&:hover{
 				//text-decoration: underline;
+				color: #5e6f81;
 				.icon-close{
 					@include transition(all 0.5s ease-in-out);
 					@include opacity(1);
@@ -230,9 +232,11 @@
 			text-decoration: none;
 			a{
 				text-decoration: none;
-				color: #919191;
+				color: #9a9a9a;
+				@include transition(all 0.5s ease-in-out);
 				&:hover{
 					//text-decoration: underline;
+					color: #5e6f81;
 				}
 			}
 			&:hover{
@@ -524,6 +528,8 @@
 									right: 16px;
 									display: inline-block;
 									@include sized-sprite($icons, ico_arrow_up);
+									@include transition(all 0.5s ease-in-out);
+									@include opacity(.5);
 								}
 								.numb__down{
 									cursor: pointer;
@@ -532,6 +538,17 @@
 									right: 16px;
 									display: inline-block;
 									@include sized-sprite($icons, ico_arrow_down);
+									@include transition(all 0.5s ease-in-out);
+									@include opacity(.5);
+								}
+								&:hover{
+									.numb__up,
+									.numb__down{
+										&:hover{
+											@include transition(all 0.5s ease-in-out);
+											@include opacity(1);
+										}
+									}
 								}
 							}
 
@@ -558,7 +575,7 @@
 
 
 			.order{
-				margin: 37px 0 11px;
+				margin: 37px 0 0;
 			}
 				.order__list{
 					margin-left: 15px;

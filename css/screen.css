@@ -62,12 +62,14 @@ a { color: #00919e; }
 #kreditwidget .header__info { position: relative; display: inline-block; vertical-align: top; line-height: 1; padding-top: 13px; margin-left: 40px; color: #8ebd3a; text-decoration: none; font-size: 14px; }
 #kreditwidget .header__info:hover { text-decoration: underline; }
 #kreditwidget .header__info .icon-info { position: absolute; top: 16px; left: -28px; }
-#kreditwidget .header__close { position: relative; display: inline-block; float: right; margin-right: 28px; cursor: pointer; vertical-align: top; text-transform: lowercase; font-size: 14px; color: #34353c; padding-top: 15px; text-decoration: none; }
+#kreditwidget .header__close { position: relative; display: inline-block; float: right; margin-right: 28px; cursor: pointer; vertical-align: top; text-transform: lowercase; font-size: 14px; color: #9a9a9a; padding-top: 15px; text-decoration: none; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+#kreditwidget .header__close:hover { color: #5e6f81; }
 #kreditwidget .header__close:hover .icon-close { -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 #kreditwidget .header__close .icon-close { position: absolute; top: 16px; right: -27px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 #kreditwidget .footer { height: 100px; }
 #kreditwidget .footer__nav { display: inline-block; line-height: 100px; vertical-align: middle; color: #919191; font-size: 14px; text-decoration: none; }
-#kreditwidget .footer__nav a { text-decoration: none; color: #919191; }
+#kreditwidget .footer__nav a { text-decoration: none; color: #9a9a9a; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+#kreditwidget .footer__nav a:hover { color: #5e6f81; }
 #kreditwidget .footer__nav:hover .icon-back { -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 #kreditwidget .footer__nav .icon-back { display: inline-block; position: relative; top: 3px; left: 0; margin-right: 10px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 #kreditwidget .footer__move { float: right; width: 60%; text-align: right; }
@@ -115,13 +117,14 @@ a { color: #00919e; }
 #kreditwidget .basket__number { width: 50%; margin-left: 13px; font-size: 13px; color: #787a87; }
 #kreditwidget .numb { position: relative; display: inline-block; margin-left: 11px; }
 #kreditwidget .numb input { width: 47px; height: 36px; padding: 0 17px; border: 1px solid #dcdcdc; -webkit-border-radius: 19px; -moz-border-radius: 19px; -ms-border-radius: 19px; -o-border-radius: 19px; border-radius: 19px; -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.17); -moz-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.17); box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.17); color: #3b3b3b; font-size: 17px; }
-#kreditwidget .numb .numb__up { cursor: pointer; position: absolute; top: 12px; right: 16px; display: inline-block; background: url('../img/icons-s672e674b95.png') 0 -459px no-repeat; width: 11px; height: 7px; }
-#kreditwidget .numb .numb__down { cursor: pointer; position: absolute; top: 21px; right: 16px; display: inline-block; background: url('../img/icons-s672e674b95.png') 0 -442px no-repeat; width: 11px; height: 7px; }
+#kreditwidget .numb .numb__up { cursor: pointer; position: absolute; top: 12px; right: 16px; display: inline-block; background: url('../img/icons-s672e674b95.png') 0 -459px no-repeat; width: 11px; height: 7px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+#kreditwidget .numb .numb__down { cursor: pointer; position: absolute; top: 21px; right: 16px; display: inline-block; background: url('../img/icons-s672e674b95.png') 0 -442px no-repeat; width: 11px; height: 7px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+#kreditwidget .numb:hover .numb__up:hover, #kreditwidget .numb:hover .numb__down:hover { -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 #kreditwidget .basket__resume { padding: 12px 136px 9px 36px; margin: 0 -30px 0 -36px; line-height: 1; text-align: right; color: #fff; font-size: 22px; background-color: #8bb82e; -webkit-box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2); -moz-box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2); box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2); }
 #kreditwidget .basket__resume span { font-weight: bold; font-size: 25px; }
 #kreditwidget .basket__resume strong { font-size: 37px; }
 #kreditwidget .basket__resume small { font-size: 14px; }
-#kreditwidget .order { margin: 37px 0 11px; }
+#kreditwidget .order { margin: 37px 0 0; }
 #kreditwidget .order__list { margin-left: 15px; }
 #kreditwidget .order__list ul { list-style: none; }
 #kreditwidget .order__list li { list-style-position: inside; margin-bottom: 18px; }
