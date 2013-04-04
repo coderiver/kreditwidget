@@ -204,7 +204,7 @@
 				text-decoration: underline;
 				.icon-close{
 					@include transition(all 0.5s ease-in-out);
-					@include opacity(.5);
+					@include opacity(1);
 				}
 			}
 			.icon-close{
@@ -212,7 +212,7 @@
 				top: 16px;
 				right: -27px;
 				@include transition(all 0.5s ease-in-out);
-				@include opacity(1);
+				@include opacity(.8);
 			}
 		}
 
@@ -238,7 +238,7 @@
 			&:hover{
 				.icon-back{
 					@include transition(all 0.5s ease-in-out);
-					@include opacity(.5);
+					@include opacity(1);
 				}
 			}
 			.icon-back{
@@ -248,7 +248,7 @@
 				left: 0;
 				margin-right: 10px;
 				@include transition(all 0.5s ease-in-out);
-				@include opacity(1);
+				@include opacity(.8);
 			}
 		}
 		.footer__move{
@@ -332,8 +332,9 @@
 					@include box-shadow(inset -3px 0 2px rgba(0, 0, 0, 0.07));
 					span {
 						position: absolute;
-						top: -6px;
-						right: -3px;
+						top: -7px;
+						right: -5px;
+						font-family: Tahoma, "Geneva CY", sans-serif;
 						font-size: 45px;
 						color: #f6ff00;
 						@include text-shadow(0 1px 0 rgba(0,0,0,.10));
@@ -451,12 +452,12 @@
 							margin-top: -14px;
 							margin-left: 43px;
 							@include transition(all 0.5s ease-in-out);
-							@include opacity(1);
+							@include opacity(.8);
 						}
 						&:hover{
 							.icon-delete{
 								@include transition(all 0.5s ease-in-out);
-								@include opacity(.5);
+								@include opacity(1);
 							}
 						}
 					}
@@ -556,9 +557,133 @@
 					}
 
 
+			.order{
+				margin: 37px 0;
+			}
+				.order__list{
+					margin-left: 15px;
+					ul{
+						list-style: none;
+					}
+					li{
+						list-style-position: inside;
+						margin-bottom: 18px;
+					}
+					a{
+						font-weight: bold;
+						font-size: 15px;
+						color: #2b68af;
+						text-decoration: none;
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+					.order__num{
+						display: inline-block;
+						@include background-image(linear-gradient(top, #9dc937 0%, #7ea52c 100%));
+						@include text-shadow(0 1px 0 #548112);
+						border-radius: 50%;
+						color: #fff;
+						font-size: 22px;
+						height: 33px;
+						line-height: 33px;
+						width: 33px;
+						text-align: center;
+						margin-right: 11px;
+					}
+				}
 
-
-
+				.order__calc{
+					position: relative;
+					border-top: 1px solid #dcdcdc;
+					border-bottom: 1px solid #dcdcdc;
+					margin-top: 37px;
+					margin-left: 8px;
+					&:before{
+						position: absolute;
+						top: -1px;
+						left: -14px;
+						width: 20px;
+						height: 100%;
+						padding-top: 2px;
+						background: url(../img/icons/wave_left.png) repeat-y;
+						content: "";
+					}
+					&:after{
+						position: absolute;
+						top: -1px;
+						right: -14px;
+						width: 20px;
+						height: 100%;
+						padding-top: 2px;
+						background: url(../img/icons/wave_right.png) repeat-y;
+						content: "";
+					}
+				}
+					.order__param{
+						background-color: #fff7e0;
+						padding: 10px 17px;
+						overflow: hidden;
+						.order__param-title{
+							font-size: 14px;
+							color: #98844c;
+							font-weight: normal;
+							line-height: 1;
+						}
+					}
+						.order__total{
+							float: left;
+							font-size: 20px;
+							color: #5a646e;
+							display: inline-block;
+							line-height: 1;
+							background: #fff;
+							padding: 8px 13px 7px 14px;
+							margin: 8px 50px 8px 0;
+							border-bottom: 1px solid #ead8a9;
+							@include box-shadow(0 1px 1px #f8eccd);
+							strong{
+								display: inline-block;
+								vertical-align: middle;
+								color: #8cb82e;
+								font-size: 37px;
+								margin-left: 20px;
+							}
+							span{
+								display: inline-block;
+								vertical-align: bottom;
+								color: #8cb82e;
+								font-size: 22px;
+							}
+						}
+						.order__percent{
+							float: left;
+							width: 150px;
+						}
+						.order__first-call{
+							float: left;
+							width: 150px;
+						}
+						.order__term{
+							float: left;
+							width: 150px;
+						}
+					.order__meta{
+						padding: 13px 30px;
+					}
+						.order__payment{
+							color: #34353c;
+							font-size: 15px;
+							display: inline-block;
+							width: 160px;
+							strong{
+								color: #6fae35;
+								font-size: 28px;
+							}
+							span{
+								color: #808080;
+							}
+						}
 
 
 
