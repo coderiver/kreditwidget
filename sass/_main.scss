@@ -201,7 +201,7 @@
 			padding-top: 15px;
 			text-decoration: none;
 			&:hover{
-				text-decoration: underline;
+				//text-decoration: underline;
 				.icon-close{
 					@include transition(all 0.5s ease-in-out);
 					@include opacity(1);
@@ -232,7 +232,7 @@
 				text-decoration: none;
 				color: #919191;
 				&:hover{
-					text-decoration: underline;
+					//text-decoration: underline;
 				}
 			}
 			&:hover{

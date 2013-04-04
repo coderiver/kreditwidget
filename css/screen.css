@@ -63,13 +63,11 @@ a { color: #00919e; }
 #kreditwidget .header__info:hover { text-decoration: underline; }
 #kreditwidget .header__info .icon-info { position: absolute; top: 16px; left: -28px; }
 #kreditwidget .header__close { position: relative; display: inline-block; float: right; margin-right: 28px; cursor: pointer; vertical-align: top; text-transform: lowercase; font-size: 14px; color: #34353c; padding-top: 15px; text-decoration: none; }
-#kreditwidget .header__close:hover { text-decoration: underline; }
 #kreditwidget .header__close:hover .icon-close { -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 #kreditwidget .header__close .icon-close { position: absolute; top: 16px; right: -27px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 #kreditwidget .footer { height: 100px; }
 #kreditwidget .footer__nav { display: inline-block; line-height: 100px; vertical-align: middle; color: #919191; font-size: 14px; text-decoration: none; }
 #kreditwidget .footer__nav a { text-decoration: none; color: #919191; }
-#kreditwidget .footer__nav a:hover { text-decoration: underline; }
 #kreditwidget .footer__nav:hover .icon-back { -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 #kreditwidget .footer__nav .icon-back { display: inline-block; position: relative; top: 3px; left: 0; margin-right: 10px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 #kreditwidget .footer__move { float: right; width: 60%; text-align: right; }
