@@ -897,6 +897,7 @@
 		margin: 0 auto 25px;
 	}
 		.formline{
+			position: relative;
 			margin-bottom: 5px;
 			label{
 				float: left;
@@ -922,11 +923,10 @@
 			}
 		}
 				.formline__accept{
-					position: relative;
 						&:after{
 							position: absolute;
 							top: 6px;
-							right: -44px;
+							right: 36px;
 							content: "";
 							@include sized-sprite($icons, ico_check);
 						}
@@ -936,11 +936,10 @@
 						}
 				}
 				.formline__deny{
-					position: relative;
 					&:after{
 						position: absolute;
 						top: 6px;
-						right: -44px;
+						right: 36px;
 						content: "";
 						@include sized-sprite($icons, ico_warning);
 					}
