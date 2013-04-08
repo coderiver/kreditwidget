@@ -3,6 +3,10 @@
 
 
 #kreditwidget{
+	*{margin:0;padding:0; }
+	@include iphone{*{-webkit-text-size-adjust: none;}}
+	button::-moz-focus-inner { padding: 0; border: 0 }
+	input[type="submit"]::-moz-focus-inner { padding: 0; border: 0 }
 
 	.clear {
 		clear: both;
@@ -109,6 +113,15 @@
 		background-color: #fff;
 		@include box-shadow(0 1px 49px rgba(0,0,0,.75));
 		padding: 15px 30px 0 36px;
+		//line-height:1.4;
+		font: {
+			family: Arial,sans-serif;
+			weight: normal;
+			size: 16px;
+		}
+		a img,fieldset{
+			border:none;
+		}
 	}
 
 	.header{
@@ -277,7 +290,11 @@
 				margin-right: 20px;
 			}
 		}
-
+		.pages{
+			.pages_active{
+				display: block;
+			}
+		}
 		.sequence{
 			position: relative;
 			overflow: hidden;
@@ -382,6 +399,12 @@
 					content: "";
 					@include sized-sprite($icons, title);
 				}
+				&.basket__title{
+					margin-bottom: 40px;
+				}
+				&.order__title{
+					margin-bottom: 37px;
+				}
 			}
 			.title_border{
 				position: relative;
@@ -390,11 +413,12 @@
 				text-transform: uppercase;
 				border-bottom: 1px solid #dcdcdc;
 				padding: 0 10px 13px 10px;
+				margin-bottom: 20px;
 			}
 
 			.basket{
+				display: none;
 				@extend %clr;
-				margin: 40px 0 0;
 				ul{
 					list-style: none;
 					margin-bottom: 23px;
@@ -545,8 +569,8 @@
 								.numb__up{
 									cursor: pointer;
 									position: absolute;
-									top: 12px;
-									right: 16px;
+									top:8px;
+									right: 10px;
 									display: inline-block;
 									@include sized-sprite($icons, ico_arrow_up);
 									@include transition(all 0.5s ease-in-out);
@@ -555,8 +579,8 @@
 								.numb__down{
 									cursor: pointer;
 									position: absolute;
-									top: 21px;
-									right: 16px;
+									top: 16px;
+									right: 10px;
 									display: inline-block;
 									@include sized-sprite($icons, ico_arrow_down);
 									@include transition(all 0.5s ease-in-out);
@@ -596,10 +620,7 @@
 
 
 			.order{
-				margin: 37px 0 0;
-				&.order_alt{
-					margin: 20px 0 0;
-				}
+				display: none;
 			}
 				.order__list{
 					margin-left: 15px;
@@ -681,12 +702,12 @@
 								padding: 0 14px;
 							}
 							.numb__up{
-								top: 8px;
-								right: 14px;
+								top: 5px;
+								right: 10px;
 							}
 							.numb__down{
-								top: 16px;
-								right: 14px;
+								top: 13px;
+								right: 10px;
 							}
 						}
 					}
@@ -891,10 +912,13 @@
 					color: #34353c;
 					font-size: 15px;
 				}
-
 	.userdata{
+		display: none;
 		width: 510px;
 		margin: 0 auto 25px;
+		.userdata__footer{
+			margin: 0 -148px;
+		}
 	}
 		.formline{
 			position: relative;
@@ -1053,8 +1077,9 @@
 							resize: vertical;
 						}
 					}
-
-
+			.last-step{
+				display: none;
+			}
 
 
 
