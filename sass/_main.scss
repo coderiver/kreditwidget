@@ -1,6 +1,20 @@
 @import "lib/base";
 // Normally mainpage styles
 
+//green
+//$text-color : #8EBD3A;
+//$active-num-color : #80A72D;
+//$resume-bg-color : #8BB82E;
+//$order-color : #8CB82E;
+//$order-payment-color : #6FAE35;
+
+//purple
+$text-color : #834365;
+$active-num-color : #be6394;
+$resume-bg-color : #be6394;
+$order-color : #945c7a;
+$order-payment-color : #834365;
+
 
 #kreditwidget{
 	*{margin:0;padding:0; }
@@ -14,9 +28,9 @@
 		font-size: 0;
 	}
 
-	.icon-phone				{@include sized-sprite($icons, ico_phone);}
+	.icon-phone				{@include sized-sprite($icons, ico_phone2);}
 	.icon-info				{@include sized-sprite($icons, ico_info);}
-	.icon-check				{@include sized-sprite($icons, ico_check);}
+	.icon-check				{@include sized-sprite($icons, ico_check2);}
 	.icon-warning			{@include sized-sprite($icons, ico_warning);}
 	.icon-close				{@include sized-sprite($icons, ico_close);}
 	.icon-cancel			{@include sized-sprite($icons, ico_cancel);}
@@ -37,11 +51,14 @@
 		font-weight: normal;
 		background-position: 0 0;
 		@include transition(all 0.5s ease-in-out);
-		@include text-shadow(0 1px 0 #75a61a);
+		//@include text-shadow(0 1px 0 #75a61a);
+		@include text-shadow(0 1px 0 #2a111e);
 		text-decoration: none;
 		@include border-radius(23px);
-		@include box-shadow(0 3px 0 #47700d);
-		@include background-image(linear-gradient(#d6ec60, #8bb72d));
+		//@include box-shadow(0 3px 0 #47700d);
+		@include box-shadow(0 3px 3px #5f3152, 0 1px 0 #e19dc0 inset, 0 -1px 0 #442337 inset);
+		//@include background-image(linear-gradient(#d6ec60, #8bb72d));
+		@include background-image(linear-gradient(#c36e9f, #7c3f60));
 		background-size: 150%;
 		&:hover{
 			@include transition(all 0.5s ease-in-out);
@@ -62,14 +79,16 @@
 		@include background-clip(padding-box);
 		background-color: #cce460;
 		@include box-shadow(0 1px 0 #d2d6dc);
-		@include background-image(linear-gradient(#ddec88, #b4d53b));
+		//@include background-image(linear-gradient(#ddec88, #b4d53b));
+		@include background-image(linear-gradient(#bf6498, #7c3f61));
+		color: #fff;
 		font-size: 16px;
 		strong{
 			font-size: 20px;
 			font-weight: bold;
 		}
 		&:before{
-			@include sized-sprite($icons, label);
+			@include sized-sprite($icons, label2);
 			position: absolute;
 			top: 0;
 			left: -10px;
@@ -189,7 +208,7 @@
 			line-height: 1;
 			padding-top: 13px;
 			margin-left: 40px;
-			color: #8ebd3a;
+			color: $text-color;
 			text-decoration: none;
 			font-size: 14px;
 			&:hover{
@@ -324,14 +343,17 @@
 		}
 			.sequence__item{
 				height: 69px;
-				background: #7ca32c;
-				@include box-shadow(inset -2px -2px -1px rgba(0, 0, 0, 0.06));
-				&.sequence__item3{
-					background: #8ab829;
-				}
-				&.sequence__item4{
-					background: #c5d629;
-				}
+				//background: #7ca32c;
+				background: #be6394;
+				//@include box-shadow(inset -2px -2px -1px rgba(0, 0, 0, 0.06));
+				@include box-shadow(-1px 0 0 #ab5b7f);
+				cursor: default;
+				// &.sequence__item3{
+				// 	background: #8ab829;
+				// }
+				// &.sequence__item4{
+				// 	background: #c5d629;
+				// }
 				&.inactive{
 					background: #a7b1bc;
 					.sequence__num{
@@ -345,7 +367,7 @@
 					@include box-shadow(none);
 					.sequence__num{
 						span{
-							color: #80a72d;
+							color: $active-num-color;
 						}
 					}
 					.sequence__text{
@@ -397,7 +419,7 @@
 					top: -9px;
 					left: -71px;
 					content: "";
-					@include sized-sprite($icons, title);
+					@include sized-sprite($icons, title2);
 				}
 				&.basket__title{
 					margin-bottom: 40px;
@@ -523,7 +545,7 @@
 								width: 25%;
 								text-transform: lowercase;
 								font-size: 14px;
-								color: #8ebd3a;
+								color: $text-color;
 								margin-left: 35px;
 								margin-top: 7px;
 								line-height: 1;
@@ -604,7 +626,7 @@
 						text-align: right;
 						color: #fff;
 						font-size: 22px;
-						background-color: #8bb82e;
+						background-color: $resume-bg-color;
 						@include box-shadow(inset 0 2px 1px rgba(0,0,0,.20));
 						span{
 							font-weight: bold;
@@ -642,8 +664,9 @@
 					}
 					.order__num{
 						display: inline-block;
-						@include background-image(linear-gradient(top, #9dc937 0%, #7ea52c 100%));
-						@include text-shadow(0 1px 0 #548112);
+						//@include background-image(linear-gradient(top, #9dc937 0%, #7ea52c 100%));
+						@include background-image(linear-gradient(top, #be6397 0%, #7c3f61 100%));
+						@include text-shadow(0 1px 0 rgba(0,0,0,.5));
 						border-radius: 50%;
 						color: #fff;
 						font-size: 22px;
@@ -727,14 +750,14 @@
 							strong{
 								display: inline-block;
 								vertical-align: middle;
-								color: #8cb82e;
+								color: $order-color;
 								font-size: 37px;
 								margin-left: 20px;
 							}
 							span{
 								display: inline-block;
 								vertical-align: bottom;
-								color: #8cb82e;
+								color: $order-color;
 								font-size: 22px;
 							}
 						}
@@ -762,11 +785,12 @@
 							width: 160px;
 							line-height: 1.3;
 							strong{
-								color: #6fae35;
+								color: $order-payment-color;
 								font-size: 28px;
 							}
 							span{
-								color: #808080;
+								//color: #808080;
+								color: $order-payment-color;
 							}
 						}
 			.application{
@@ -784,14 +808,16 @@
 					padding: 0 18px 0 63px;
 					text-transform: uppercase;
 					color: #fff;
-					@include text-shadow(0 1px 0 #406a0d);
-					@include background-image(linear-gradient(#a4c259, #578316));
+					//@include text-shadow(0 1px 0 #406a0d);
+					@include text-shadow(0 1px 0 #5f2241);
+					//@include background-image(linear-gradient(#a4c259, #578316));
+					@include background-image(linear-gradient(#bf6498, #7c3f61));
 					&:before{
 						content: "";
 						position: absolute;
 						display: block;
 						border-style: solid;
-						border-color: #355c04 transparent transparent transparent;
+						border-color: #5e213e transparent transparent transparent;
 						bottom: -13px;
 						left: 0;
 						border-width: 13px 0 0 14px;
@@ -856,7 +882,8 @@
 			 font-size: 25px !important;
 			 width: 80%;
 			 position: relative;
-			 background: #a8d647;
+			 //background: #a8d647;
+			 background: #be6394;
 			 color: #fff;
 			 @include text-shadow(0 1px 0 #7dbd21);
 			 text-align: center;
@@ -868,7 +895,8 @@
 					position: absolute;
 					display: block;
 					bottom: -21px;
-					border: 23px solid #7d9d37;
+					//border: 23px solid #7d9d37;
+					border: 23px solid #682748;
 					z-index: -1;
 				}
 				&:before{
@@ -887,7 +915,8 @@
 						position: absolute;
 						display: block;
 						border-style: solid;
-						border-color: #8db632 transparent transparent transparent;
+						//border-color: #8db632 transparent transparent transparent;
+						border-color: #8a3966 transparent transparent transparent;
 						bottom: -21px;
 					}
 					&:before{
@@ -901,7 +930,7 @@
 				}
 			}
 			.thumbs-up{
-				@include sized-sprite($icons, thumbs_up);
+				@include sized-sprite($icons, thumbs_up2);
 				margin: -22px auto 15px auto;
 			}
 
@@ -952,11 +981,12 @@
 							top: 6px;
 							right: 36px;
 							content: "";
-							@include sized-sprite($icons, ico_check);
+							@include sized-sprite($icons, ico_check2);
 						}
 						input{
 							@include box-shadow(none);
-							border: 1px solid #95be34;
+							//border: 1px solid #95be34;
+							border: 1px solid #9d517c;
 						}
 				}
 				.formline__deny{
