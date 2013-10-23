@@ -43,27 +43,28 @@ $order-payment-color : #834365;
 	.button{
 		display: inline-block;
 		vertical-align: middle;
-		height: 46px;
-		line-height: 46px;
+		height: 42px;
+		line-height: 42px;
 		padding: 0 33px;
 		font-size: 20px;
 		color: #fff;
 		font-weight: normal;
+		border-color: #954D75 #743C5C #3D1F31;
+		border-style: solid;
+		border-width: 1px;
 		background-position: 0 0;
 		@include transition(all 0.5s ease-in-out);
 		//@include text-shadow(0 1px 0 #75a61a);
-		@include text-shadow(0 1px 0 #2a111e);
+		@include text-shadow(1px 1px 1px #200016);
 		text-decoration: none;
 		@include border-radius(23px);
 		//@include box-shadow(0 3px 0 #47700d);
-		@include box-shadow(0 3px 3px #5f3152, 0 1px 0 #e19dc0 inset, 0 -1px 0 #442337 inset);
+		box-shadow: 0 3px 2px rgba(68, 14, 53, 0.85), 0 1px 0 #E198BE inset;
 		//@include background-image(linear-gradient(#d6ec60, #8bb72d));
-		@include background-image(linear-gradient(#c36e9f, #7c3f60));
-		background-size: 150%;
+		@include background-image(linear-gradient(#BD6395, #7C3F60));
 		&:hover{
-			@include transition(all 0.5s ease-in-out);
-			@include box-shadow(0 3px 0 #65a012);
-			background-position: 0 50%;
+			background-color: #E176B2;
+			@include background-image(linear-gradient(#E176B2, #8B486C));
 		}
 	}
 
